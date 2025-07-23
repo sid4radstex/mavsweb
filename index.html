@@ -24,10 +24,10 @@ s
 <script language="Javascript">
 function sendEmail() {
     var recipient = "info@mavsventures.org";
-	var emailString = document.forms[0].email.value;
-	var subject = "Question about RADS Texas from " + document.forms[0].email.value;
-	if (emailString=="") {
-		subject = "Question about RADS Texas ";
+	var nameString = document.forms[0].name.value;
+	var subject = "Question about MAVS VENTURES from " + document.forms[0].name.value;
+	if (nameString=="") {
+		subject = "Question about MAVS VENTURES ";
 	}
     var body = document.forms[0].message.value;;
     var mailtoLink = "mailto:" + recipient + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
