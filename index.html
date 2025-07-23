@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<!--
+	Multiverse by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>RADS TEXAS</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+body {
+  background-image: url(images/IMG_7225.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+} 
+s
+</style>
+<script language="Javascript">
+function sendEmail() {
+    var recipient = "info@mavsventures.org";
+	var emailString = document.forms[0].email.value;
+	var subject = "Question about RADS Texas from " + document.forms[0].email.value;
+	if (emailString=="") {
+		subject = "Question about RADS Texas ";
+	}
+    var body = document.forms[0].message.value;;
+    var mailtoLink = "mailto:" + recipient + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    window.location.href = mailtoLink;
+}
+</script>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						
+						<nav>
+							<ul>
+								<li><a href="#footer" class="icon solid fa-info-circle">About</a></li>
+							</ul>
+						</nav>
+					</header>
+				<!-- Footer -->
+					<footer id="footer" class="panel">
+						<div class="inner split">
+							<div>
+								<section>
+									<h2>MAVS VENTURES LLC</h2>
+									<p>MAVS VENTURES is a real estate investment and property management company based in the Dallas-Fort Worth (DFW) metroplex. Our core business involves acquiring, renovating, and leasing single-family and multi-family residential properties in high-growth, high-demand areas throughout DFW. We focus on long-term asset appreciation and consistent rental income by targeting stable neighborhoods with strong rental markets and access to schools, transportation, and employment centers.</p>
+									<p>Our approach combines data-driven market analysis, conservative financial planning, and hands-on property management to maximize returns while providing quality, affordable housing options. By maintaining well-kept properties and responsive tenant service, MAVS VENTURES seeks to foster long-term tenant relationships and stable occupancy rates.</p>
+									<p>With DFW’s ongoing population and economic growth, we are strategically positioned to expand our real estate portfolio and contribute to the region’s housing needs while delivering value to our investors and stakeholders..</p>
+								</section>
+								<p class="copyright">
+									&copy; Design: <a href="http://html5up.net">HTML5 UP. Used under CCA 3.0 License. Modified from Original</a>.
+								</p>
+							</div>
+							<div>
+								<section>
+									<h2>Get in touch</h2>
+									<form method="post"">
+										<div class="fields">
+											<div class="field half">
+												<input type="text" name="name" id="name" placeholder="Name" />
+											</div>
+											<div class="field half">
+												<input type="text" name="email" id="email" placeholder="Email" />
+											</div>
+											<div class="field">
+												<textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><input type="button" value="Send" class="primary"  onclick="Javascript:sendEmail();"/></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</form>
+								</section>
+							</div>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
