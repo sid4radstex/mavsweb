@@ -1,102 +1,251 @@
-<!DOCTYPE HTML>
-<!--
-	Multiverse by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>MAVS VENTURES</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-body {
-  background-image: url(images/IMG_7225.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-} 
-s
-</style>
-<script language="Javascript">
-function sendEmail() {
-    var recipient = "info@mavsventures.org";
-	var nameString = document.forms[0].name.value;
-	var subject = "Question about MAVS VENTURES from " + document.forms[0].name.value;
-	if (nameString=="") {
-		subject = "Question about MAVS VENTURES ";
-	}
-    var body = document.forms[0].message.value;;
-    var mailtoLink = "mailto:" + recipient + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-    window.location.href = mailtoLink;
-}
-</script>
-	</head>
-	<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MAVS VENTURES</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+    }
 
-				<!-- Header -->
-					<header id="header">
-						
-						<nav>
-							<ul>
-								<li><a href="#footer" class="icon solid fa-info-circle">About</a></li>
-							</ul>
-						</nav>
-					</header>
-				<!-- Footer -->
-					<footer id="footer" class="panel">
-						<div class="inner split">
-							<div>
-								<section>
-									<h2>MAVS VENTURES LLC</h2>
-									<p>MAVS VENTURES is a real estate investment and property management company based in the Dallas-Fort Worth (DFW) metroplex. Our core business involves acquiring, renovating, and leasing single-family and multi-family residential properties in high-growth, high-demand areas throughout DFW. We focus on long-term asset appreciation and consistent rental income by targeting stable neighborhoods with strong rental markets and access to schools, transportation, and employment centers.</p>
-									<p>Our approach combines data-driven market analysis, conservative financial planning, and hands-on property management to maximize returns while providing quality, affordable housing options. By maintaining well-kept properties and responsive tenant service, MAVS VENTURES seeks to foster long-term tenant relationships and stable occupancy rates.</p>
-									<p>With DFW’s ongoing population and economic growth, we are strategically positioned to expand our real estate portfolio and contribute to the region’s housing needs while delivering value to our investors and stakeholders..</p>
-								</section>
-								<p class="copyright">
-									&copy; Design: <a href="http://html5up.net">HTML5 UP. Used under CCA 3.0 License. Modified from Original</a>.
-								</p>
-							</div>
-							<div>
-								<section>
-									<h2>Get in touch</h2>
-									<form method="post"">
-										<div class="fields">
-											<div class="field half">
-												<input type="text" name="name" id="name" placeholder="Name" />
-											</div>
-											<div class="field half">
-												<input type="text" name="email" id="email" placeholder="Email" />
-											</div>
-											<div class="field">
-												<textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="button" value="Send" class="primary"  onclick="Javascript:sendEmail();"/></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
-							</div>
-						</div>
-					</footer>
+    header {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-			</div>
+    header h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
-	</body>
+    nav label {
+      color: #e0e7ff;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 8px 12px;
+      display: inline-block;
+    }
+
+    nav a {
+      color: #e0e7ff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 12px;
+      display: inline-block;
+    }
+
+    nav a:hover, nav label:hover {
+      background-color: #3b82f6;
+      border-radius: 4px;
+    }
+
+    /* Dropdown setup using checkbox toggle */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown input {
+      display: none;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      color: #1e3a8a;
+      min-width: 180px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+      z-index: 999;
+      border-radius: 6px;
+      overflow: hidden;
+      top: 35px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      color: #1e3a8a;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #e0e7ff;
+    }
+
+    .dropdown input:checked + label + .dropdown-content {
+      display: block;
+    }
+
+    /* Allow hover on desktop */
+    @media (hover: hover) {
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    section {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #1e3a8a;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+      list-style: disc;
+    }
+
+    .cta {
+      background: linear-gradient(to right, #3b82f6, #1e3a8a);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      border-radius: 12px;
+    }
+
+    .cta h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .cta a {
+      color: white;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #1e3a8a;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav label, nav a {
+        padding: 10px;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+
+      .dropdown-content {
+        position: relative;
+        top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 align = center>MAVS VENTURES</h1>
+
+</header>
+
+<div class="container">
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>MAVS VENTURES is a full-service real estate investment company serving the Dallas-Fort Worth metroplex. We specialize in acquiring, renovating, managing, and renting residential properties. Our goal is to provide high-quality housing while revitalizing communities and creating lasting value for property owners and investors alike.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Purchase of single-family and multi-family homes</li>
+      <li>Renovation and rehab of distressed properties</li>
+      <li>Rental property management</li>
+      <li>Property acquisition consulting</li>
+    </ul>
+  </section>
+
+  <section id="rentals">
+    <h2>Rental Properties</h2>
+    <p>We offer a variety of well-maintained rental homes in the DFW area — from family houses to duplexes and small multi-unit buildings. All our properties are updated to modern standards and managed professionally to ensure a high-quality tenant experience.</p>
+    <ul>
+      <li>Affordable rent pricing</li>
+      <li>Responsive maintenance and repairs</li>
+      <li>Online rent payments and lease access</li>
+    </ul>
+  </section>
+
+  <section id="sellers">
+    <h2>Sell Your Property</h2>
+    <p>Need to sell quickly? We buy houses in any condition. No agent fees, no commissions, and we can close in as little as 7 days.</p>
+    <ul>
+      <li>Fast, cash offers for your home</li>
+      <li>No repairs or clean-ups required</li>
+      <li>We handle all closing costs and paperwork</li>
+    </ul>
+  </section>
+
+  <section id="investors">
+    <h2>Partner With Us</h2>
+    <p>We welcome investor partnerships on fix-and-flip or buy-and-hold opportunities. Whether you're a passive investor or looking for joint venture deals, we provide transparent reporting and a strong track record in the DFW market.</p>
+    <ul>
+      <li>Attractive ROI potential</li>
+      <li>Hands-off investing</li>
+      <li>Fully managed operations</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Want to rent, sell, or invest with us? We'd love to hear from you.</p>
+    <p>Email: <a href="mailto:info@mavsventures.org">info@mavsventures.org</a></p>
+  </section>
+
+  <div class="cta">
+    <h3>Let’s Build Better Communities in DFW</h3>
+    <p><a href="mailto:info@mavsventures.org">Contact us today</a> to get started!</p>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2025 MAVS VENTURES LLC. All rights reserved.
+</footer>
+
+</body>
 </html>
